@@ -1,0 +1,1628 @@
+/* responsivenes for laptop
+Laptops:
+Typical screen size: 992px to 1199px
+Media query: @media (min-width: 992px) and (max-width: 1199px) { ... }
+Tablets:
+Typical screen size: 768px to 991px
+Media query: @media (min-width: 768px) and (max-width: 991px) { ... }
+Phones:
+Typical screen size: 767px and below
+Media query: @media (max-width: 767px) { ... }*/
+
+
+body{
+    display: grid;
+    grid-template-columns: 6% 93.5%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: roboto sans sans-serif;
+    scroll-behavior: smooth;
+    }
+    .trends-logo-menu{
+        display: none;
+    }
+    .Trends-logo{
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        
+    }
+    #search-trends{
+        display: none;
+    }
+/* laptop responsiveness*/
+@media (min-width: 992px) and (max-width: 6000px) { 
+/* main-messaging-page*/
+.commenting-in-current-liveshow{
+    visibility: hidden;
+}
+.search-for-message-page{
+    visibility: hidden;
+}
+.main-messaging-page{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 86%;
+    z-index: 1;
+    height: 100%;
+    background-color: rgb(215, 215, 215);
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+    display: none;
+}
+.main-messaging-page-for-phone-only-mobile-size{
+    display: none;
+}
+.meassage-reading-page{
+    background-color: white;
+    height: 40%;
+    width: 95%;
+    margin: 3rem 0 4rem 3rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.chatlists-page{
+    background-color: white;
+    height: 40%; 
+    margin: 3rem 3rem 4rem 0;  
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.chatlists-page-top{
+    width: 100%;
+    height: 10%;
+    border-bottom: .1rem solid rgb(214, 214, 214);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.chatlists-page-top{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+.chatlist-profile-photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    margin-left: 2rem;
+}
+.general-box{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 77%;
+    align-items: center;
+    gap: 1rem;
+    border-top: .1rem solid rgb(216, 216, 216);
+    padding-top: 1rem;
+}
+.input-box{
+    position: relative;
+    width: 90%;
+    top: 80%;
+    height: 3rem;
+    background-color: rgb(208, 208, 208);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 1rem;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.inner-input-box{
+    width: 95%;
+    border: none;
+    height: 90%;
+    background-color: rgb(208, 208, 208);
+    margin-left: .2rem;
+    font-size: 16px;
+    padding-left: 1rem;
+}
+.inner-input-box:focus{
+    outline: none;
+}
+.box-svg{
+    padding-right: 1rem;
+}
+.chatlist-profile-photo-lower-contents h1{
+font-size: 1.5rem;
+}
+.message-layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2rem;
+    align-items: center;
+}
+.search-for-message-page{
+    display: none;
+}
+
+.message-layout h1{
+    font-size: 2rem;
+    color: rgb(50, 50, 50);
+}
+.friends-list{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin-left: 2rem;
+    gap: 1rem;
+    overflow-y: scroll;
+}
+.profile-lists{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+
+}
+.messaging-emoji{
+    margin-right: 1rem;
+}
+.friends-profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+    
+}
+.friends-profile-lower-contents{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+.friends-profile-lower-contents p{
+    margin: 0;
+}
+.friends-profile-lower-contents h2{
+    margin-bottom: .2rem;
+}
+.side-navigation{
+    height: 100vh;
+    margin-left: 1rem;
+    width: 13%;
+    border-right: .1rem solid rgb(212, 212, 212);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.side-navigation-icons-layout{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin-top: 2.5rem;
+    
+}
+.side-navigation-icons{
+    display: flex;
+    height: 2.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-left: .5rem;
+    margin-right: .5rem;
+}
+.side-navigation-icons:hover{
+    background-color: rgb(237, 237, 237);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    fill: black;
+    cursor: pointer;
+}
+.launch-live-icon-box{
+    padding-right: 3.5rem;
+}
+.side-navigation p{
+    font-size: 18px;
+    letter-spacing: .02rem;
+}
+.bottom-side-navigation{
+    position: absolute;
+    bottom: 1.5rem;
+   /*visibility: hidden;*/
+}
+svg{
+    height: 1.5rem;
+    
+}
+.home-icon{
+    fill: none!important;
+}
+
+/* more icon pop-up*/
+.more-popup-icon{
+    position: absolute;
+    bottom: 4.5rem;
+    background-color: white;
+    z-index: 1;
+    width: 91%;
+    border: .1rem solid rgb(224, 224, 224);
+    padding-left: 15px;
+    padding-bottom: 10px;
+    display: none;
+}
+.more-popup-icon a{
+    text-decoration: none;
+    color: black;
+}
+
+/* suggested brands begins here*/
+.suggested-brands{
+    margin-top: 1rem;
+    overflow-y: scroll;
+    height: 50%;
+}
+.suggested-brands{
+    visibility: hidden; 
+}
+.suggested-brand-profile{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+}
+.suggested-brand-image{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+}
+.suggested-brands-header{
+    margin-bottom: 0;
+    border-top: .1rem solid rgb(210, 207, 207);
+    padding-top: .5rem;
+}
+
+
+/* main body styling begins here*/
+
+/*explore page*/
+.explore-page{
+    margin-top: 1rem;
+    height: 100%;
+    width: 86.5%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    grid-template-columns: 20% 20% 20%;
+    grid-template-rows: repeat(2 1fr);
+    gap: .3rem;
+    justify-content: center;
+    /*display: none;*/
+    display: none;
+}
+.live-shows{
+    background-color: burlywood;
+    height: 25rem;
+}
+
+/*home page*/
+.home-page{
+    height: 100vh;
+    width: 86.5%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+}
+#sliding-carousel{
+    display: grid;
+    grid-template-columns: 1.5fr 4fr 1.5fr;
+    grid-template-rows: 1fr;
+    width: 97%;
+    height: 45%;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    column-gap: .5rem;
+    margin-bottom: 3rem;
+}
+.left-carousel{
+    background-color: grey;
+    height: 80%;
+    margin-top: 1.6rem;
+}
+.right-carousel{
+    background-color: gray;
+    height: 80%;
+    margin-top: 1.6rem;
+}
+.current-carousel{
+    background-color: grey;
+}
+.trending-brands-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 98.5%;
+    height: 75%;
+    column-gap: .5rem;
+    row-gap: 1rem;
+    margin-left: 1rem;
+    
+}
+.trending-brands{
+    background-color: grey;
+    border-radius: 1rem;
+    height: 100%;
+}
+.home-page h3{
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+/* notification page styling begins here*/
+#notification-page{
+    position: fixed;
+    top: 0;
+    left: 3.5rem;
+    right: 0;
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    z-index: 100;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-right: .1rem solid rgb(201, 200, 200);
+    display: none;
+}
+.notification-upper-contents h2{
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: rgb(74, 74, 74);
+}
+.notification-page{
+    overflow-y: scroll;
+    height: 90%;
+    margin-left: 2rem;
+}
+
+.notification-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.notification-info span{
+    font-weight: bold;
+}
+/* search-page styling beguins here*/
+.search-page{
+    position: fixed;
+    top: 0;
+    left: 3.5rem;
+    right: 0;
+    height: 100%;
+    width: 25%;
+    background-color: white;
+    z-index: 100;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-right: .1rem solid rgb(201, 200, 200);
+    display: none;
+}
+.search-upper-contents{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    border-bottom: .1rem solid rgb(181, 178, 178);
+    padding-bottom: 2rem;
+}
+.search-upper-contents h2{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: rgb(74, 74, 74);
+}
+.search-upper-contents input{
+    height: .7rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    border: none;
+    background-color: rgb(214, 214, 214);
+    margin-right: 1rem;
+}
+.search-lower-contents{
+    display: flex;
+    justify-content: space-evenly;
+}
+/*products categories start here*/
+.products-categories{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 2.5rem;
+    overflow-y: scroll;
+    height: 70%;
+    
+}
+.products-profile{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.products-image{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+}
+.products-stats{
+    display: flex;
+    flex-direction: column;
+}
+.products-stats h4, .products-stats p{
+ margin: 0;
+}
+/* brands list styling starts here*/
+.popular-brands-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: scroll;
+    height: 70%;
+    display: none;
+}
+.brand-profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 2.2rem;
+    
+}
+.profile-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+}
+.brands-stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.brands-stats h4, .brands-stats p{
+    margin: 0;
+}
+/* profile page styling starts*/
+.main-profile-page{
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+    gap: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 86.5%;
+    z-index: 1;
+    overflow-y: hidden;
+    display: none;
+}
+.profile-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+    gap: 5rem;
+    height: 100%;
+    border-bottom: .1rem solid rgb(214, 214, 214);
+    z-index: 2;
+}
+.main-profile-image{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: green;
+}
+.profile-stats{
+    width: 70%;
+    height: 70%;
+    background-color: burlywood;
+}
+.profile-lower-contents{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+.profile-lower-contents-icons-lists{
+    display: flex;
+    justify-content: space-evenly;
+}
+.profile-lower-contents-icons{
+    display: flex;
+    margin-top: .3rem;  
+    gap: .5rem;
+}
+.profile-lower-contents-icons p{
+    margin-top: .3rem;
+    font-size: 18px;
+}
+
+/* live page styling starts here*/
+#main-live-page{
+    margin-top: 0;
+    margin-right: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85.6%;
+    gap: 2rem;
+    display: none;
+}
+.random-liveshow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 95%;
+    background-color: rgb(88, 88, 88);
+    border-bottom: .1rem solid rgb(210, 210, 210);
+    z-index: 1;    
+}
+.recommended-liveshow-lists{
+    display: grid;
+    height: 40rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    margin-left: 1rem; margin-right: 1rem;
+}
+#recommended-liveshow{
+    height: 100%;
+}
+#recommended-liveshow h4{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    margin-left: 1rem;
+}
+.recommended-liveshow-contents{
+    background-color: rgb(88, 88, 88);
+    border-radius: 1rem;
+}
+/* current-liveshow-page*/
+.current-liveshow-page{
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    width: 85.6%;
+    z-index: 1;
+    height: 90%; 
+    display: none;
+}
+.current-liveshow{
+    width: 90%;
+    height: 90%;
+    background-color: rgb(88, 88, 88);
+    margin-top: 3%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-left: 4%;
+    
+}
+.liveshow-comments-section{
+    position: absolute;
+    background-color: rgb(116, 116, 116);
+    height: 70%;
+    width: 90%;
+    top: 6.5rem;
+    left: 0;
+    margin-left: 4%;
+    
+}
+.shows-navigator{
+    height: 10rem;
+    width: 3rem;
+    background-color: rgb(88, 88, 88);
+    position: fixed;
+    top: 20rem;
+    right: .5rem;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.livechat-in-liveshow{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    background-color: rgb(197, 197, 197);
+    left: 75.3%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0;
+}
+
+/* launch live begins*/
+.main-live-launching-page{
+    background-color: rgb(236, 236, 236);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85.8%;
+    z-index: 1;
+    height: 100%;
+    overflow-y: hidden;
+    display: none;
+}
+.right-broadcating-tools{
+    height: 100%;
+    width: 100%;
+    background-color:  rgb(89, 89, 89);
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.middle-for-broadcat{
+    height: 100%;
+    width: 100%;
+    background-color:  rgb(33, 33, 33);
+}
+.tools-box{
+    width: 10%;
+    height: 80%;
+    background-color: burlywood;
+}
+.launch-live-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 90% 10% ;
+    width: 97%;
+    height: 95%;
+    position: absolute;
+    left: 1.2rem;
+    top: 1rem;
+    gap: 1rem;  
+}
+}
+@media (min-width: 760px) and (max-width: 991px) {
+body{
+    display: grid;
+    grid-template-columns: 6% 93.5%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: roboto sans sans-serif;
+    scroll-behavior: smooth;
+}
+.Trends-logo{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: none;
+}
+.side-navigation{
+    height: 100vh;
+    margin-left: 1rem;
+    width: 6%;
+    border-right: .1rem solid rgb(212, 212, 212);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.side-navigation-icons-layout{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 7rem;
+    
+}
+.side-navigation-icons{
+    display: flex;
+    height: 2.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-left: .5rem;
+    margin-right: .5rem;
+}
+.side-navigation-icons p{
+    display: none;
+}
+.launch-live-icon-box{
+    padding-right: 3.5rem;
+}
+.side-navigation p{
+    font-size: 18px;
+    letter-spacing: .02rem;
+}
+.bottom-side-navigation{
+    position: absolute;
+    bottom: 2rem;
+   /*visibility: hidden;*/
+}
+svg{
+    height: 1.5rem;
+}
+
+/* more icon pop-up*/
+.more-popup-icon{
+    position: absolute;
+    bottom: 5rem;
+    background-color: white;
+    z-index: 1;
+    width: 8rem;
+    border: .1rem solid rgb(224, 224, 224);
+    padding-left: 15px;
+    padding-bottom: 10px;
+    display: none;
+}
+.more-popup-icon a{
+    text-decoration: none;
+    color: black;
+}
+/* suggested brands begins here*/
+.suggested-brands{
+    visibility: hidden; 
+}
+
+/* main body styling begins here*/
+
+/*explore page*/
+.explore-page{
+    margin-top: 1rem;
+    height: 100%;
+    width: 94%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: repeat(2 1fr);
+    gap: .3rem;
+    justify-content: center;
+    display: none;
+}
+.live-shows{
+    background-color: burlywood;
+    height: 25rem;
+}
+
+/*home page*/
+.home-page{
+    height: 100vh;
+    width: 94%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+}
+#sliding-carousel{
+    display: grid;
+    grid-template-columns: 1.5fr 3.5fr 1.5fr;
+    grid-template-rows: 1fr;
+    width: 94.5%;
+    height: 37%;
+    margin: 2rem;
+    column-gap: .5rem;
+}
+.left-carousel{
+    background-color: grey;
+    height: 80%;
+    margin-top: 1.6rem;
+}
+.right-carousel{
+    background-color: gray;
+    height: 80%;
+    margin-top: 1.6rem;
+}
+.current-carousel{
+    background-color: grey;
+}
+.trending-brands-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 96%;
+    height: 55%;
+    column-gap: .5rem;
+    row-gap: .5rem;
+    margin-left: 1.5rem;
+    
+}
+.trending-brands{
+    background-color: grey;
+    border-radius: 1rem;
+    height: 100%;
+}
+.home-page h3{
+    font-size: 1.7rem;
+    margin-left: 1.6rem;
+    margin-bottom: 1rem;
+}
+/* notification page styling begins here*/
+#notification-page{
+    position: fixed;
+    top: 0;
+    left: 3.5rem;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    background-color: white;
+    z-index: 100;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-right: .1rem solid rgb(201, 200, 200);
+    display: none;
+}
+.notification-upper-contents h2{
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: rgb(74, 74, 74);
+}
+.notification-page{
+    overflow-y: scroll;
+    height: 90%;
+    margin-left: 2rem;
+}
+
+.notification-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.notification-info span{
+    font-weight: bold;
+}
+/* search-page styling beguins here*/
+.search-page{
+    position: fixed;
+    top: 0;
+    left: 3.5rem;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    background-color: white;
+    z-index: 100;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-right: .1rem solid rgb(201, 200, 200);
+    display: none;
+}
+.search-upper-contents{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    border-bottom: .1rem solid rgb(181, 178, 178);
+    padding-bottom: 2rem;
+}
+.search-upper-contents h2{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: rgb(74, 74, 74);
+}
+.search-upper-contents input{
+    height: .7rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    border: none;
+    background-color: rgb(214, 214, 214);
+    margin-right: 1rem;
+}
+.search-lower-contents{
+    display: flex;
+    justify-content: space-evenly;
+}
+/*products categories start here*/
+.products-categories{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 2.5rem;
+    overflow-y: scroll;
+    height: 70%;
+}
+.products-profile{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.products-image{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+}
+.products-stats{
+    display: flex;
+    flex-direction: column;
+}
+.products-stats h4, .products-stats p{
+ margin: 0;
+}
+/* brands list styling starts here*/
+.popular-brands-list{
+    visibility: hidden;
+}
+/* profile page styling starts*/
+.main-profile-page{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+    gap: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 92.5%;
+    z-index: 1;
+    overflow-y: hidden;
+    display: none;
+}
+.profile-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+    gap: 1rem;
+    height: 100%;
+    border-bottom: .1rem solid rgb(214, 214, 214);
+    z-index: 2;
+}
+.main-profile-image{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: green;
+}
+.profile-stats{
+    width: 80%;
+    height: 70%;
+    background-color: burlywood;
+}
+.profile-lower-contents{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+.profile-lower-contents-icons-lists{
+    display: flex;
+    justify-content: space-evenly;
+}
+.profile-lower-contents-icons{
+    display: flex;
+    margin-top: .3rem;  
+    gap: .5rem;
+}
+.profile-lower-contents-icons p{
+    margin-top: .3rem;
+    font-size: 18px;
+}
+
+/* live page styling starts here*/
+#main-live-page{
+    margin-top: 0;
+    margin-right: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 92%;
+    gap: 3rem;
+    display: none;
+}
+.random-liveshow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    background-color: rgb(88, 88, 88);
+    border-bottom: .1rem solid rgb(210, 210, 210);
+    z-index: 1;    
+}
+.recommended-liveshow-lists{
+    display: grid;
+    height: 40rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+#recommended-liveshow{
+    height: 100%;
+}
+#recommended-liveshow h4{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+.recommended-liveshow-contents{
+    background-color: rgb(88, 88, 88);
+    border-radius: 1rem;
+}
+/* current-liveshow-page*/
+.current-liveshow-page{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 92%;
+    z-index: 1;
+    height: 100%;
+    background-color: rgb(88, 88, 88);
+    display: none;
+}
+.current-liveshow{
+    display: none;
+}
+.liveshow-comments-section{
+    position: absolute;
+    background-color: rgb(116, 116, 116);
+    height: 80%;
+    width: 95%;
+    top: 6rem;
+    left: 0;
+}
+.commenting-in-current-liveshow{
+    position: fixed;
+    top: 94%;
+    right: 0;
+    width: 91.8%;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+}
+.commenting-input{
+    width: 90%;
+    height: 2.5rem;
+    background-color: rgb(195, 195, 195);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border: none;
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    margin-left: .1rem;
+  
+}
+.commenting-input:focus{
+    outline: none;
+}
+.shows-navigator{
+    visibility: hidden;
+}
+/* launch live begins*/
+.main-live-launching-page{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 92.1%;
+    z-index: 1;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: none;
+}
+.right-broadcating-tools{
+    visibility: hidden;
+   
+}
+.middle-for-broadcat{
+    height: 80%;
+    width: 100%;
+    display: none;
+}
+.products-box{
+    width: 70%;
+    height: 10%;
+    background-color: blue;
+    
+}
+.tools-box{
+    width: 70%;
+    height: 10%;
+    background-color: burlywood;
+}
+.launch-live-container{
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: 100%;
+    width: 100%;
+    height: 93%;
+    position: absolute;
+    right: 0;
+    left:0;
+    top: 0;
+    gap: 1rem;
+    background-color:  rgb(44, 44, 44);
+}
+ /* message mobile begins*/
+    #tablets-messaging-page{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        left: 5rem;
+        width: 93%; 
+        height: 100%;
+        display: none;
+    }
+    .main-messaging-page{
+        display: none;
+    }
+    #search-trends-message-page{
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        height: 2.5rem;
+        gap: .5rem;
+        background-color: rgb(177, 177, 177);
+        align-items: center;
+        margin: 2rem .7rem 1.5rem .7rem;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    #search-trends-message-page svg{
+        margin-left: .5rem;
+    }
+    .search-trends-message-page{
+        width: 80%;
+        height: 80%;
+        border: none;
+        background-color: rgb(177, 177, 177);
+        font-size: 1rem;
+
+    }
+    .search-trends-message-page:focus{
+        outline: none;
+    }
+    .main-messaging-for-phone-mobile-only{
+        display: flex;
+        flex-direction: column;
+        height: 85%;
+        width: 95;
+        gap: 1rem;
+        overflow-y: scroll;
+        margin-left: .5rem;
+    }
+    .main-messaging-for-phone-mobile-only-profile{
+        display: flex;
+        gap: 1rem;
+        flex-direction: row;
+        margin-left: .5rem;
+    }
+    .main-messaging-for-phone-mobile-only-profile-photo{
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+    }
+}
+
+
+@media(max-width: 767px) {
+   body{
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: roboto sans sans-serif;
+    scroll-behavior: smooth;
+    }
+    /* main-live launching for tabs and laptop etc*/
+    .main-live-launching-page{
+        display: none;
+    }
+    .trends-logo-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: white;
+        z-index: 150;
+        
+    }
+    .trends-logo-menu h1, .trends-logo-menu svg{
+        margin: .5rem;  
+        
+    }
+    .Trends-logo{
+        display: none;/* must never be displayed*/
+    }
+    .side-navigation{
+        border-right: .1rem solid rgb(212, 212, 212);
+        z-index: 1400;
+        height: 0;
+        width: 100%;
+        position: fixed;
+        top: 94vh;
+    }
+    .side-navigation-icons-layout{
+        display: grid;
+        padding-top: .5rem;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        position: fixed;
+        right: 0;
+        left: 0;
+        padding-left: .8rem;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+    }
+    .side-navigation-icons{
+        display: flex;
+        height: 2.5rem;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: baseline;
+        
+    }
+    .remove-icon{
+       display: none;
+    }
+    .side-navigation-icons p{
+        display: none;
+    }
+    .launch-live-icon-box{
+        padding-right: 3.5rem;
+    }
+    .side-navigation p{
+        font-size: 18px;
+        letter-spacing: .02rem;
+    }
+    .bottom-side-navigation{
+        position: absolute;
+        bottom: 2rem;
+        display: none;
+       /*visibility: hidden;*/
+    }
+    svg{
+        height: 1.5rem;
+    }
+    
+    /* more icon pop-up*/
+    .more-popup-icon{
+        display: none;/* must always be display none*/
+    }
+    /* suggested brands begins here*/
+    .suggested-brands{
+        visibility: hidden; 
+    }
+    /* main body styling begins here*/
+    
+    /*explore page*/
+    .explore-page{
+        margin-top: .3rem;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 2.5rem;
+        right: 0;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: .3rem;
+        justify-content: center;
+        display: none;
+    }
+    .show{
+        display: none;
+    }
+    .live-shows{
+        background-color: burlywood;
+        height: 15rem;
+    }
+    #search-trends{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding-left: .5rem;
+        z-index: 150;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        align-items: center;
+        gap: 1rem;
+        visibility: hidden;
+    }
+    #search-trends svg{
+        height: 1.2rem;
+    }
+    .search-trends{
+        height: 40px;
+        background-color: white;
+        width: 90%;
+        border: none;
+        font-size: 1rem;
+    }
+    .search-trends:focus{
+        outline: none;
+    }
+    
+    /*home page*/
+    .home-page{
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        z-index: 1;
+        display: block;
+    }
+    #sliding-carousel{
+        display: grid;
+        grid-template-columns: 1.5fr 5fr 1.5fr;
+        grid-template-rows: 1fr;
+        width: 96%;
+        height: 25%;
+        column-gap: .5rem;
+        margin-left: .35rem;
+    }
+    .left-carousel{
+        background-color: grey;
+        height: 80%;
+        margin-top: 1.2rem;
+    }
+    .right-carousel{
+        background-color: gray;
+        height: 80%;
+        margin-top: 1.2rem;
+    }
+    .current-carousel{
+        background-color: grey;
+    }
+    .trending-brands-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 98%;
+        height: 55%;
+        column-gap: .5rem;
+        row-gap: .5rem; 
+        margin-left: .2rem;
+    }
+    .trending-brands{
+        background-color: grey;
+        border-radius: 1rem;
+        height: 100%;
+    }
+    .home-page h3{
+        font-size: 16px;
+        margin-left: .2rem;
+        margin-bottom: .7rem;
+    }
+    /* notification page styling begins here*/
+    #notification-page{
+        visibility: hidden;
+    }
+    
+    /* search-page styling beguins here*/
+    .search-page{
+     visibility: hidden;
+    }
+    /*products categories start here*/
+    .products-categories{
+        visibility: hidden;
+    }
+    /* profile page styling starts*/
+    .main-profile-page{
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 70%;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        overflow-y: hidden;
+        display: none;
+    }
+    .profile-page{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 1rem;
+        gap: 1rem;
+        height: 100%;
+        border-bottom: .1rem solid rgb(214, 214, 214);
+        z-index: 2;
+    }
+    .main-profile-image{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: green;
+    }
+    .profile-stats{
+        width: 70%;
+        height: 50%;
+        background-color: burlywood;
+    }
+    .profile-svg{
+        height: 1.3rem;
+    }
+    .profile-lower-contents{
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+    }
+    .profile-lower-contents-icons-lists{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .profile-lower-contents-icons{
+        display: flex;
+        margin-top: .3rem;  
+        gap: .3rem;
+    }
+    .profile-lower-contents-icons p{
+        margin-top: .15rem;
+        font-size: 16px;
+    }
+    
+    /* live page styling starts here*/
+    #main-live-page{
+        margin-top: 0;
+        margin-right: 0;
+        display: none;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60% 40%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        gap: 2rem;
+    }
+    .random-liveshow{
+        height: 100%;
+        background-color: rgb(88, 88, 88);
+        border-bottom: .1rem solid rgb(210, 210, 210);   
+    }
+    .recommended-liveshow-lists{
+        display: grid;
+        height: 40rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-left: .5rem; margin-right: .5rem;
+        gap: .5rem;
+    }
+    #recommended-liveshow{
+        height: 100%;
+    }
+    #recommended-liveshow h4{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0;
+        margin-left: .5rem;
+    }
+    .recommended-liveshow-contents{
+        background-color: rgb(88, 88, 88);
+        border-radius: 1rem;
+    }
+    /* current-liveshow-page*/
+    .current-liveshow-page{
+        display: none; 
+    }
+    
+    /* main-messaging-page*/
+    .main-messaging-page{
+        display: none;
+    }
+    /* launch live begins*/
+    .main-live-launching-page-for-phone-only-mobile-size{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        right: 0;
+        width: 100%; 
+        height: 100vh;
+        background-color: black;
+        display: none;
+    }
+    .main-live-launching-page-mobile{
+        width: 100%;
+        height: 85%;
+        overflow-y: hidden;
+        margin-top: .05rem;
+        background-color: rgb(62, 62, 62);
+    }
+    /* message mobile begins*/
+    .main-messaging-page-for-phone-only-mobile-size{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        right: 0;
+        width: 100%; 
+        height: 100%;
+        display: none;
+    }
+    #search-trends-message-page{
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        height: 2.5rem;
+        gap: .5rem;
+        background-color: rgb(177, 177, 177);
+        align-items: center;
+        margin: 1rem 0 1rem .7rem;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    #search-trends-message-page svg{
+        margin-left: .5rem;
+    }
+    .search-trends-message-page{
+        width: 80%;
+        height: 80%;
+        border: none;
+        background-color: rgb(177, 177, 177);
+        font-size: 1rem;
+
+    }
+    .search-trends-message-page:focus{
+        outline: none;
+    }
+    .main-messaging-for-phone-mobile-only{
+        display: flex;
+        flex-direction: column;
+        height: 85%;
+        width: 95;
+        gap: 1rem;
+        overflow-y: scroll;
+    }
+    .main-messaging-for-phone-mobile-only-profile{
+        display: flex;
+        gap: 1rem;
+        flex-direction: row;
+        margin-left: .5rem;
+    }
+    .main-messaging-for-phone-mobile-only-profile-photo{
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+    }
+}
+
+
+

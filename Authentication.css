@@ -2,12 +2,366 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin: 0;
+    padding: 0;
 }
 .trends-logo{
     background-color: burlywood;
     width: 70px;
     height: 70px;
     position: absolute;
-    top: 50%;
+    top: 65%;
+    display: none;
+}
+.trends-stats{
+    position: absolute;
+    bottom: 1%;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: none;
+}
+
+section{
+    display: none;
+}@media (min-width: 760px) and (max-width: 991px) {
+    .trends-intro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8em;
+    }
+    .intro-page{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 22rem;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    .trends-intro h1{
+        font-size: 2rem;
+        margin-top: 5rem;
+        margin-left: 1rem; margin-right: 1rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    .trends-logo{
+        background-color: burlywood;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 45%;
+        
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .third-party-authentication{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .7rem;
+        
+    }
+    .google{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        font-size: .8rem;
+        height: 2.5rem;
+        border: .1rem solid rgb(2, 2, 2);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        font-weight: bold;
+        align-items: center;
+        background-color: white;
+        padding: 0  10.5rem 0 0;
+        width: 20rem;
+    }
+    .facebook{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: white;
+        border: .1rem solid rgb(0, 0, 0);
+        gap: 1rem;
+        font-size: .8rem;
+        height: 2.5rem;
+        font-weight: bold;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 0  9.5rem 0 0;
+        width: 21.2rem;
+    }
+    .sign-up{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        color: white;
+        background-color: rgb(0, 0, 0);
+        gap: 1rem;
+        font-size: 1.2rem;
+        height: 2.5em;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        font-weight: bold;
+        align-items: center;
+        padding: .2rem 13.5rem;
+    }
+    .log-in{
+        margin-top: 1rem;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .header-contents{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5.5rem;
+        align-items: center;
+    }
+    .header-contents p{
+        font-size: 2rem;
+    }
+    .email-page{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .email-input:focus{
+        outline: none;
+    }
+    .email-input{
+        background-color: rgb(149, 149, 149);
+        border: none;
+        height: 2.5rem;
+        color: white;
+    }
+    .next-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+        
+    }
+    button{
+        padding:1rem 2rem;
+        border: none;
+        background-color: rgb(149, 149, 149);
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        color: black;
+        font-weight: bold;
+        
+    }
+    .signup{
+        position: absolute;
+        left: 1rem;
+        right: 0;
+        width: 90%;
+        display: none;
+        
+    }
+    .login{
+        position: absolute;
+        left: 1rem;
+        right: 0;
+        width: 90%;
+        display: none;
+    }
+    .email-page .email-input:focus{
+        outline: none;
+    } 
+}
+@media(max-width: 767px){
+    .trends-intro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8em;
+    }
+    .intro-page{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 9rem;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+    .trends-intro h1{
+        font-size: 1.5rem;
+        margin-top: 5rem;
+        margin-left: 1rem; margin-right: 1rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    .trends-logo{
+        background-color: burlywood;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 45%;
+        
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .third-party-authentication{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .7rem;
+    }
+    .google{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        font-size: .8rem;
+        height: 2rem;
+        border: .1rem solid rgb(2, 2, 2);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-weight: bold;
+        align-items: center;
+        background-color: white;
+        padding: 0  10.5rem 0 0;
+    }
+    .facebook{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: white;
+        border: .1rem solid rgb(0, 0, 0);
+        gap: 1rem;
+        font-size: .8rem;
+        height: 2rem;
+        font-weight: bold;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 0  9.5rem 0 0;
+    }
+    .sign-up{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        color: white;
+        background-color: rgb(0, 0, 0);
+        gap: 1rem;
+        font-size: .8rem;
+        height: 2em;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        font-weight: bold;
+        align-items: center;
+        padding: .2rem 8.5rem
+    }
+    .log-in{
+        margin-top: 1rem;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+    .header-contents{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5.5rem;
+        align-items: center;
+    }
+    .header-contents p{
+        font-size: 2rem;
+    }
+    .email-page{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .email-input:focus{
+        outline: none;
+    }
+    .email-input{
+        background-color: rgb(149, 149, 149);
+        border: none;
+        height: 2.5rem;
+        color: white;
+    }
+    .next-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+        
+    }
+    button{
+        padding:1rem 2rem;
+        border: none;
+        background-color: rgb(149, 149, 149);
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        color: black;
+        font-weight: bold;
+        
+    }
+    .signup{
+        position: absolute;
+        left: 1rem;
+        right: 0;
+        width: 90%;
+        display: none;
+        
+    }
+    .login{
+        position: absolute;
+        left: 1rem;
+        right: 0;
+        width: 90%;
+        display: none;
+    }
+    .email-page .email-input:focus{
+        outline: none;
+    }
 }

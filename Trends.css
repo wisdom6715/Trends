@@ -29,17 +29,30 @@ body{
         margin-top: 1rem;
         
     }
+    
     #search-trends{
+        display: none;
+    }
+    .mobile-size-main-menu{
         display: none;
     }
 /* laptop responsiveness*/
 @media (min-width: 992px) and (max-width: 6000px) { 
 /* main-messaging-page*/
+.ordered-products{
+    display: none;
+}
+.mobile-current-liveshow{
+    display: none;
+}
 .commenting-in-current-liveshow{
     visibility: hidden;
 }
 .search-for-message-page{
     visibility: hidden;
+}
+.current-liveshow-mobile-page-main{
+    display: none;
 }
 .main-messaging-page{
     position: absolute;
@@ -709,6 +722,156 @@ body{
     font-family: roboto sans sans-serif;
     scroll-behavior: smooth;
 }
+.brands-settings{
+    position: absolute;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    display: none;
+    z-index: 10;
+}
+#settings-back-icon{
+    display: none;
+}
+.settings-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5.5rem;
+    margin-top: 1rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+.main-settings-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.brands-logo{
+    width: 8rem;
+    height: 8rem;
+    background-color: red;
+    border-radius: 50%;
+}
+.settings-input{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: .5rem;
+}
+.settings-input input{
+    width: 92%;
+    height: 2rem;
+}
+.save-button{
+    position:fixed;
+    bottom: 3.5rem;
+    right: 1rem;
+    padding: 1rem 3.5rem;
+    font-size: 1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+#antenna, #antenna-slide{
+margin-top: .4rem; margin-left: .5rem;
+}
+.live-symbol{
+    background-color: red;
+    position: absolute;
+    top: .7rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: row;
+    height: 1.5rem;
+    align-items: center;
+    color: white;
+    padding-left: .4rem;
+}
+.trends-logo-menu{
+display: none;
+}
+
+.order-page{
+    display: none;
+    height: 100%;
+    width: 92%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7% 93%;
+}
+.order-header{
+    display: flex;
+    position:fixed;
+    top: 0;
+    right: 0;
+    left: 4rem;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7rem;
+    border-bottom: .1rem solid rgb(198, 198, 198);
+    padding-left: .5rem;
+    background-color: white;
+    height: 3rem;
+}
+.ordered-products{
+    margin-top: 3.5rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    height: 95vh;
+    overflow-y: scroll;
+    padding-left: .5rem;
+}
+.product-order-info{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+}
+.product-order-info .product{
+    width: 70px;
+    height: 70px;
+    background-color: red;
+}
+.about-order{
+    display: flex;
+    flex-direction: column;
+    
+}
+.order-stats{
+    display: flex;
+    flex-direction: column;
+}
+.order-stats p{
+    margin: 0;
+}
+.current-liveshow{
+    display: none;
+}
+.main-live-launching-page-for-phone-only-mobile-size{
+    display: none;
+}
+.current-liveshow-mobile-page-main{
+    display: none;
+}
+.mobile-current-liveshow{
+    display: none;
+}
+.trends-logo-menu h1, .trends-logo-menu svg{
+    display: none;
+}
 .Trends-logo{
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -724,6 +887,9 @@ body{
     top: 0;
     left: 0;
     z-index: 10;
+}
+.side-navigation img{
+    display: none;
 }
 .side-navigation-icons-layout{
     display: flex;
@@ -831,14 +997,14 @@ svg{
     background-color: gray;
     height: 80%;
     margin-top: 1.6rem;
-}
+} 
 .current-carousel{
     background-color: grey;
 }
 .trending-brands-list{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     width: 96%;
     height: 55%;
     column-gap: .5rem;
@@ -1024,7 +1190,7 @@ svg{
     margin-top: 0;
     margin-right: 0;
     grid-template-columns: 1fr;
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 60% 20%;
     position: absolute;
     top: 0;
     right: 0;
@@ -1043,10 +1209,11 @@ svg{
 }
 .recommended-liveshow-lists{
     display: grid;
-    height: 40rem;
+    height: 60rem;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
+    margin-left: 1rem; margin-right: 1rem;
 }
 #recommended-liveshow{
     height: 100%;
@@ -1055,6 +1222,7 @@ svg{
     font-size: 2rem;
     margin-bottom: 1rem;
     margin-top: 0;
+    margin-left: .5rem; margin-right: .5rem;
 }
 .recommended-liveshow-contents{
     background-color: rgb(88, 88, 88);
@@ -1071,9 +1239,7 @@ svg{
     background-color: rgb(88, 88, 88);
     display: none;
 }
-.current-liveshow{
-    display: none;
-}
+
 .liveshow-comments-section{
     position: absolute;
     background-color: rgb(116, 116, 116);
@@ -1126,6 +1292,35 @@ svg{
 .right-broadcating-tools{
     visibility: hidden;
    
+}
+.launch-symbol{
+    position: absolute;
+    right: 1rem;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    color: white;
+    padding: 0 .2rem 0 .2rem;
+    z-index: 10;
+}
+#start-icon{
+    width: 4rem;
+    height: 4rem;
+}
+.live-start-button{
+    position: absolute;
+    bottom: 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
 }
 .middle-for-broadcat{
     height: 80%;
@@ -1184,6 +1379,9 @@ svg{
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
+    .back-icon{
+        display: none;
+    }
     #search-trends-message-page svg{
         margin-left: .5rem;
     }
@@ -1202,9 +1400,55 @@ svg{
         display: flex;
         flex-direction: column;
         height: 85%;
-        width: 95;
+        width: 95%;
         gap: 1rem;
         overflow-y: scroll;
+        margin-left: .5rem;
+    }
+    .chatting-page-mobile{
+        height: 100%;
+        width: 95%;
+        gap: 1rem;
+        position: absolute;
+       left: 4.5rem;
+       display: none;
+    }
+    .chat-message-input{
+        position: absolute;
+        bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 94%;
+        justify-content: space-between;
+        left: .5rem;
+    }
+    .chat-message-input input{
+        width: 92%;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 1.7rem;
+        padding-left: .5rem;
+    }
+    .chat-message-input input:focus{
+        outline: none;
+    }
+    .chat-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        height: 3rem;
+        width: 98%;
+        border-bottom: .1rem solid rgb(201, 201, 201);
+    }
+    .chat-profile{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: red;
         margin-left: .5rem;
     }
     .main-messaging-for-phone-mobile-only-profile{
@@ -1222,7 +1466,7 @@ svg{
 }
 
 
-@media(max-width: 767px) {
+@media(max-width: 760px) {
    body{
     display: grid;
     grid-template-columns: 100%;
@@ -1232,6 +1476,287 @@ svg{
     overflow-y: scroll;
     font-family: roboto sans sans-serif;
     scroll-behavior: smooth;
+    }
+    .brands-settings{
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 170;
+    }
+    .settings-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5.5rem;
+        height: 2.5rem;
+        font-size: .7rem;
+    }
+    .main-settings-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .brands-logo{
+        width: 5rem;
+        height: 5rem;
+        background-color: red;
+        border-radius: 50%;
+    }
+    .settings-input{
+        display: flex;
+        flex-direction: column;
+        margin-left: .5rem;
+    }
+    .settings-input input{
+        width: 92%;
+        height: 1.3rem;
+    }
+    .save-button{
+        position:fixed;
+        bottom: 3.5rem;
+        right: 1rem;
+        padding: .5rem 2rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border: none;
+        background-color: rgb(0, 0, 0);
+        color: white;
+    }
+
+    /* cattingpage*/
+    .chatting-page-mobile{
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 170;
+    }
+    .chat-message-input{
+        position: absolute;
+        bottom: 2%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 97%;
+        justify-content: space-between;
+        left: .5rem;
+    }
+    .chat-message-input input{
+        width: 90%;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 1.7rem;
+        padding-left: .5rem;
+    }
+    .chat-message-input input:focus{
+        outline: none;
+    }
+    .chat-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        height: 3rem;
+        border-bottom: .1rem solid rgb(201, 201, 201);
+    }
+    .chat-profile{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: red;
+        margin-left: .5rem;
+    }
+    /* chats ends*/
+
+
+    #antenna{
+        margin-top: .3rem;
+        margin-left: .5rem;
+       
+    }
+    #antenna-slide{
+        margin-top: .3rem;
+        margin-left: .5rem;
+    }
+    .order-page{
+        display: none;
+        grid-template-columns: 1fr;
+        grid-template-rows: 7% 93%;
+    }
+    .order-header{
+        display: flex;
+        position:fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 7rem;
+        border-bottom: .1rem solid rgb(198, 198, 198);
+        padding-left: .5rem;
+        background-color: white;
+        height: 3rem;
+    }
+    .ordered-products{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        height: 95vh;
+        overflow-y: scroll;
+        padding-left: .5rem;
+    }
+    .product-order-info{
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        align-items: center;
+    }
+    .product-order-info .product{
+        width: 70px;
+        height: 70px;
+        background-color: red;
+    }
+    .about-order{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .order-stats{
+        display: flex;
+        flex-direction: column;
+    }
+    .order-stats p{
+        margin: 0;
+    }
+    .current-liveshow-mobile-page-main{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 95vh;
+        z-index: 1600;
+        background-color: grey;
+        display: none;
+    }
+    #current-liveshow-page{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 2.9rem;
+        left: .5rem;
+        background-color: transparent;
+        width: 95%;
+    }
+    .live-symbol{
+        background-color: red;
+        position: absolute;
+        top: .7rem;
+        right: 1rem;
+        display: flex;
+        flex-direction: row;
+        height: 1.5rem;
+        align-items: center;
+        color: white;
+        padding-left: .4rem;
+    }
+    #current-liveshow-page input{
+        width: 50%;
+        background-color: rgb(207, 198, 187);
+        color: white;
+        border: none;
+        height: 1.7rem;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        padding-left: .8rem;
+
+    }
+    #current-liveshow-page input:focus{
+        outline: none;
+    }
+    .brands-stats-live{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+        margin-left: .5rem;
+        margin-top: .5rem;
+    }
+    .brands-stats-live h4{
+        margin: 0;
+        color: white;
+    }
+    .mini-profile{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: red;
+    }
+    .product-lists{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        position: absolute;
+        top: 6rem;
+        margin-left: .5rem;
+    }
+    .product-upload{
+
+        background-color: rgb(255, 255, 255);
+        width: 50px;
+        height: 50px;
+    }
+
+/* menu style begins */
+    .mobile-size-main-menu{
+        display: none;
+        flex-direction: column;
+        gap: .7rem;
+        width: 100%;
+        height: 95vh;
+        position: absolute;
+        z-index: 1500000;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: white;
+    }
+    .upper-menu-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: .2rem;
+    }
+    .explore-container{
+        padding-bottom: 3rem;
+        border-bottom: .1rem solid rgb(197, 197, 197);
+    }
+    .about-container{
+        padding-bottom: 3rem;
+        border-bottom: .1rem solid rgb(197, 197, 197);
+    }
+    .inbox-container{
+        margin-top: 2.2rem;
+    }
+    .mobile-size-main-menu img{
+        position: absolute;
+        top: .1rem;
+        left: .2rem;
+    }
+    .cancel-icon{
+        position: absolute;
+        right: .2rem;
+        top: .1rem;
     }
     /* main-live launching for tabs and laptop etc*/
     .main-live-launching-page{
@@ -1249,7 +1774,6 @@ svg{
         left: 0;
         background-color: white;
         z-index: 150;
-        
     }
     .trends-logo-menu h1, .trends-logo-menu svg{
         margin: .5rem;  
@@ -1266,9 +1790,12 @@ svg{
         position: fixed;
         top: 94vh;
     }
+    .side-navigation img{
+        display: none;
+    }
     .side-navigation-icons-layout{
         display: grid;
-        padding-top: .5rem;
+        padding-top: .9rem;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         position: fixed;
@@ -1330,13 +1857,12 @@ svg{
         position: absolute;
         top: 2.5rem;
         right: 0;
-        z-index: 1;
-        display: grid;
+        z-index: 190;
+        display: none;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: .3rem;
         justify-content: center;
-        display: none;
     }
     .show{
         display: none;
@@ -1376,7 +1902,7 @@ svg{
     
     /*home page*/
     .home-page{
-        height: 100vh;
+        height: 100%;
         width: 100%;
         position: absolute;
         top: 3rem;
@@ -1411,15 +1937,41 @@ svg{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         width: 98%;
-        height: 55%;
+        height: 100%;
         column-gap: .5rem;
         row-gap: .5rem; 
         margin-left: .2rem;
     }
     .trending-brands{
-        background-color: grey;
+        background-color: rgb(255, 255, 255);
         border-radius: 1rem;
         height: 100%;
+        display: grid;
+        grid-template-rows: 85% 10%;
+        gap: .5rem;
+    }
+    .live-container{
+        background-color: grey;
+        grid-template-rows: 80% 10%;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+    .live-stats p, .live-stats h4{
+        margin: 0;
+    }
+    .profile-lower-contents{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+    }
+    .brand-profile{
+        width: 35px;
+        height: 35px;
+        background-color: rgb(132, 32, 32);
+        border-radius: 50%;
     }
     .home-page h3{
         font-size: 16px;
@@ -1502,7 +2054,7 @@ svg{
         margin-right: 0;
         display: none;
         grid-template-columns: 1fr;
-        grid-template-rows: 60% 40%;
+        grid-template-rows: 45% 55%;
         position: absolute;
         top: 0;
         right: 0;
@@ -1514,11 +2066,28 @@ svg{
         background-color: rgb(88, 88, 88);
         border-bottom: .1rem solid rgb(210, 210, 210);   
     }
+    .click-to-watch{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       align-content: center;
+       position: relative;
+       top: 45%;
+       flex-direction: column;
+    }
+    .click-to-watch h1{
+        color: white;
+    }
+    #live-loading{
+        height: 3rem;
+        width: 5rem;
+        fill: white;
+    }
     .recommended-liveshow-lists{
         display: grid;
-        height: 40rem;
+        height: 65rem;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         margin-left: .5rem; margin-right: .5rem;
         gap: .5rem;
     }
@@ -1532,8 +2101,34 @@ svg{
         margin-left: .5rem;
     }
     .recommended-liveshow-contents{
-        background-color: rgb(88, 88, 88);
+        background-color: rgb(255, 255, 255);
         border-radius: 1rem;
+        display: grid;
+        grid-template-rows: 85% 10%;
+        gap: .7rem;
+    }
+    #show-container{
+        background-color: rgb(66, 60, 60);
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        
+    }
+    .show-profile{
+        width: 35px;
+        height: 35px;
+        background-color: red;
+        border-radius: 50%;
+    }
+    .lower-show-contents{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+    }
+    .text-contents h5, .text-contents p{
+        margin: 0;
     }
     /* current-liveshow-page*/
     .current-liveshow-page{
@@ -1555,17 +2150,139 @@ svg{
         height: 100vh;
         background-color: black;
         display: none;
+        
+    }
+    .x-cancel-icon{
+        fill: white;
+        position: absolute;
+        top: .7rem;
+        left: .5rem;
+    }
+    .number-of-viewers{
+        background-color: burlywood;
+        display: flex;
+        flex-direction: row;
+        color: white;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 1.5rem;
+        top: .7rem;
+        padding: 0 .2rem 0 .2rem;
+        
+    }
+    .launch-symbol{
+        position: absolute;
+        top: .7rem;
+        right: .5rem;
+        background-color: red;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 1.5rem;
+        color: white;
+        padding: 0 .2rem 0 .2rem;
+    }
+    #start-icon{
+        width: 4rem;
+        height: 4rem;
+    }
+    .live-start-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+    }
+    #live-start-icon{
+        position: absolute;
+        bottom: .5rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .main-live-launching-page-mobile{
         width: 100%;
-        height: 85%;
+        height: 94%;
         overflow-y: hidden;
         margin-top: .05rem;
         background-color: rgb(62, 62, 62);
     }
+    .live-instruments{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        bottom: .4rem;
+        right: 2rem;
+        gap: 1rem;
+        fill: white;
+    }
+    .live-instruments .mic{
+        fill: white;
+    }
+    .live-products{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 7.5rem;
+        left: .5rem;
+        gap: 1rem;
+        display: none;
+    }
+    .live-products div{
+        background-color: rgb(200, 200, 200);
+        width: 3rem;
+        height: 3rem;
+    }
+    .product-upload-popup{
+        position: absolute;
+        left: 7%;
+        top: 15%;
+        display: none;
+        z-index: 200;
+        flex-direction: column;
+        width: 85%;
+        height: 60%;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-profile{
+        width: 50%;
+        height: 25%;
+        background-color: red;
+    }
+    .product-box{
+        fill: white;
+        position: absolute;
+        top: 5rem;
+        left: .5rem;
+        width: 30px;
+        height:30px;
+    }
+    .live-products div h1{
+        text-align: center;
+        color: white;
+        margin-top: .6rem;
+    }
+    #items-box{
+        fill: white;
+        position: absolute;
+        top: 5rem;
+        left: .5rem;
+        width: 30px;
+        height: 30px;
+    }
     /* message mobile begins*/
     .main-messaging-page-for-phone-only-mobile-size{
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
@@ -1573,16 +2290,24 @@ svg{
         width: 100%; 
         height: 100%;
         display: none;
+        z-index: 170;
+        background-color: white;
     }
     #search-trends-message-page{
         display: flex;
         flex-direction: row;
-        width: 95%;
+        gap: .5rem;
+        margin-top: .5rem; padding-bottom: .5rem;
+        align-items: center;
+    }
+    .search-grouping{
+        display: flex;
+        flex-direction: row;
+        width: 87%;
         height: 2.5rem;
         gap: .5rem;
         background-color: rgb(177, 177, 177);
         align-items: center;
-        margin: 1rem 0 1rem .7rem;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
         border-top-left-radius: 15px;
@@ -1605,7 +2330,7 @@ svg{
     .main-messaging-for-phone-mobile-only{
         display: flex;
         flex-direction: column;
-        height: 85%;
+        height: 95%;
         width: 95;
         gap: 1rem;
         overflow-y: scroll;

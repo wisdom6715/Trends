@@ -121,6 +121,20 @@ var settingsBacIcon = document.querySelector("#settings-back-icon");
 var productPopupForm = document.querySelector(".product-upload-popup");
 var ProductTag = document.querySelectorAll(".fill-up");
 
+var uploadCancel = document.querySelector(".x-upload-icon")
+var productUpload = document.querySelector(".product-upload-popup");
+
+var productUploadTab = document.querySelector(".product-upload-popup-tablets")
+var cancelUpload = document.querySelector(".cancel-upload");
+
+var listProductLists = document.querySelector("#live-products");
+var productBoxTab = document.querySelector("#product-box");
+var fillUpBox = document.querySelectorAll(".fill-up");
+
+var productPurchase = document.querySelectorAll(".product-upload");
+var continuePopUp = document.querySelector(".continue-pop-up");
+var cancelContinue = document.querySelector(".continue-cancel");
+
 
 function replaceSVG() {
     const isMobile = window.matchMedia('(max-width: 760px)').matches;
@@ -157,19 +171,6 @@ function cancellingPage(){
 }
 cancellingPage();
 
-function pageChangerInMenu(){
-    inboxContainer.addEventListener("click", function(){
-    if(mobileMessagingPage.style.display ==="none"){
-        mobileMessagingPage.style.display ="block"
-    } if(mobileMessagingPage.style.display ="block"){
-        bottomIconsRemoval.style.display ="none"
-    } else{
-        mobileMessagingPage.style.display ="block"
-        bottomIconsRemoval.style.display ="grid"
-    }
-    })
-}
-pageChangerInMenu();
 
 function pageContents(){
     const mobileInteractiviness = window.matchMedia('(max-width: 760px)').matches 
@@ -206,6 +207,19 @@ function pageContents(){
             }
 
         })
+        function pageChangerInMenu(){
+            inboxContainer.addEventListener("click", function(){
+            if(mobileMessagingPage.style.display ==="none"){
+                mobileMessagingPage.style.display ="block"
+            } if(mobileMessagingPage.style.display ="block"){
+                bottomIconsRemoval.style.display ="none"
+            } else{
+                mobileMessagingPage.style.display ="block"
+                bottomIconsRemoval.style.display ="grid"
+            }
+            })
+        }
+        pageChangerInMenu();
         homeIconMobile.addEventListener("click", function(){
             if(homePageMobile.style.display ==="none"){
                 homePageMobile.style.display ="block"
@@ -336,21 +350,25 @@ function pageContents(){
             chatInfo[i].addEventListener("click", function(){
             if(chatListPage.style.display ==="block"){
                 chatListPage.style.display ="none"
-            } if(chatPageMobile.style.display ==="none"){
-                  chatPageMobile.style.display ="block"
-                  bottomIconsRemoval.style.display ="none"   
-            }  if(homePageMobile.style.display ==="block"){
-                  homePageMobile.style.display ="none"
-            } if(trendsLogo.style.display ==="flex"){
-                 trendsLogo.style.display ="none"
-            } else{
+                if(homePageMobile.style.display ==="block"){
+                    homePageMobile.style.display ="none"
+                } if(trendsLogo.style.display ==="flex"){
+                    trendsLogo.style.display ="none"
+                } 
+            }
+            if(chatPageMobile.style.display ==="none"){
+                chatPageMobile.style.display ="block"
+                bottomIconsRemoval.style.display ="none"   
+            }
+            else{
                 chatPageMobile.style.display ="block"
                 chatListPage.style.display ="none"
                 mobileSideMenu.style.display ="none"
                 trendsLogo.style.display ="none"
                 homePageMobile.style.display ="none" 
-            }
-        })
+              }
+            })
+             
         chatBackIcon.addEventListener("click", function(){
             if(chatPageMobile.style.display ==="block"){
                 chatPageMobile.style.display ="none"
@@ -395,9 +413,16 @@ function pageContents(){
             settingsPage.style.display ="block"
             homePageMobile.style.display ="none"
             trendsLogo.style.display ="none"
-                
+            bottomIconsRemoval.style.display ="none"    
         }
        })
+       uploadCancel.addEventListener("click", function(){
+        if(productUpload.style.display ==="block"){
+            productUpload.style.display ="none"
+        } else{
+            productUpload.style.display ="none"
+        }
+    })
        settingsHeaderh1.innerHTML = "Brand Registration"
     }
 
@@ -464,11 +489,7 @@ function pageContents(){
             })
         }
         RandomShow.addEventListener("click", function(){
-            if(buyingShow.style.display ==="none"){
-                buyingShow.style.display ="block"
-            } else{
-                buyingShow.style.display ="block"
-            }
+            mobileCurrentShow();
         })
         profileLaunchLink.addEventListener("click", function(){
             if(mainProfilePage.style.display ==="grid"){
@@ -602,6 +623,16 @@ function tabletsContents(){
             morePage.style.display ="block"
         } else {
             morePage.style.display ="none"
+        }
+    })
+    profileLaunchLink.addEventListener("click", function(){
+        if(mainProfilePage.style.display ==="grid"){
+            mainProfilePage.style.display ="none"
+        } if(launchPage.style.display ==="none"){
+            launchPage.style.display ="block"
+        } else{
+            launchLiveMobile.style.display ="block"
+            mainProfilePage.style.display ="none"
         }
     })
 
@@ -898,6 +929,8 @@ function tabletsContents(){
             if(settingsPage.style.display ==="none"){
                 settingsPage.style.display ="block"
                 morePage.style.display ="none"
+                chatPageMobile.style.display ="none"
+                currentLiveShowPage.style.display ="none"
             } if( homePageMobile.style.display === "block"){
                 homePageMobile.style.display = "none";
             } if(explorePageMobile.style.display ==="grid"){
@@ -914,7 +947,7 @@ function tabletsContents(){
                 messageTabPage.style.display ="none"
             } if(orderPage.style.display ==="grid"){
                 orderPage.style.display ="none"
-            } else{
+            }  else{
                 settingsPage.style.display ="block"
                 messageTabPage.style.display ="none"
                 mainProfilePage.style.display ="none"
@@ -925,12 +958,15 @@ function tabletsContents(){
                 homePageMobile.style.display = "none";
                 orderPage.style.display ="none"
                 morePage.style.display ="none"
+                currentLiveShowPage.style.display ="none"
+                chatPageMobile.style.display ="none"
             }
         })
         orderButton.addEventListener("click", function(){
             if(orderPage.style.display ==="none"){
                 orderPage.style.display ="grid"
                 morePage.style.display ="none"
+                currentLiveShowPage.style.display ="none"
             } if(settingsPage.style.display ==="block"){
                 settingsPage.style.display ="none"
             } if( homePageMobile.style.display === "block"){
@@ -955,11 +991,59 @@ function tabletsContents(){
                 launchPage.style.display ="none"
                 mainProfilePage.style.display ="none"
                 morePage.style.display ="none"
+                currentLiveShowPage.style.display ="none"
                 
             }
         })
-        
-        
+        chatBackIcon.addEventListener("click", function(){
+            if(chatPageMobile.style.display ==="block"){
+                chatPageMobile.style.display ="none"
+            } if(chatListPage.style.display ==="none"){
+                chatListPage.style.display ="block"
+            }else{
+                chatPageMobile.style.display ="none" 
+                chatListPage.style.display ="block"
+            }
+        })
+        cancelUpload.addEventListener("click", function(){
+            if(productUploadTab.style.display ==="flex"){
+                productUploadTab.style.display ="none"
+            } else{
+                productUploadTab.style.display ="none"
+            }
+        }) 
+        for(var i = 0; i < fillUpBox.length; i++){
+            fillUpBox[i].addEventListener("click", function(){
+                if(productUploadTab.style.display ==="none"){
+                    productUploadTab.style.display ="flex"
+                } else{
+                    productUploadTab.style.display ="none"
+                }
+            })
+        }
+        productBoxTab.addEventListener("click", function(){
+            if(listProductLists.style.display ==="none"){
+                listProductLists.style.display ="flex"
+            } else{
+                listProductLists.style.display ="none"
+            }
+        })
+        for(var i = 0; i < productPurchase.length; i++){
+            productPurchase[i].addEventListener("click", function(){
+                if(continuePopUp.style.display ==="none"){
+                    console.log("..");
+                } else{
+                    continuePopUp.style.display ="flex"
+                }
+            })
+        }
+        cancelContinue.addEventListener("click", function(){
+            if(continuePopUp.style.display ==="flex"){
+                continuePopUp.style.display ="none"
+            } else{
+                continuePopUp.style.display ="none"
+            }
+        })
     }
     
 

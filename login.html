@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Authentication.css">
+</head>
+<body>
+    <div class="login">
+        <div id="header-contents">
+            <a href="Authentication.html">
+                <svg class="out-line " id="Outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><g id="_01_align_center" data-name="01 align center">
+                    <path d="M16.752,23.994,6.879,14.121a3,3,0,0,1,0-4.242L16.746.012,18.16,1.426,8.293,11.293a1,1,0,0,0,0,1.414l9.873,9.873Z"/></g>
+                </svg>
+            </a>
+            <p>Log in</p>
+        </div>
+        <form>
+            <div class="email-page">
+                <h1>Email?</h1>
+                <input type="email" id="email-input">
+            </div>
+            <div class="email-page">
+                <h1>Password?</h1>
+                <input type="password" id="password">
+                <a class="password-recovery-link" href="password.html">forgotten Password?</a>
+            </div>
+            <div class="next-button">
+                <button onclick="loginUser()">Next</button>
+            </div>
+            <div class="message" id="message"></div>
+        </form>
+        <script>
+            async function loginUser(){
+                const email=document.getElementById("email-input").value;
+                const password=document.getElementById("password").value;
+                const message=document.getElementById('message');
+                try {
+                    const response=await fetch('http://localhost:5000/api/login',{
+                        method:'POST',
+                        headers:{
+                            'Content-Type':'application/json'
+                        },
+                        body:JSON.stringify({email,password})
+                    });
+                    if (response.ok) {
+                        const data=await response.json();
+                        //localStorage.setItem('token',data.token);
+                        window.location.href="http://127.0.0.1:5500/Trends.live/Trends.html";
+                    }
+                    else{
+                        const errorData=await response.json();
+                        message.style.color='red';
+                        message.textContent="Inalid credentials";
+                    }
+                } catch (error) {
+                    console.error("network error",error);
+                    message.style.color='red';
+                    message.textContent='Network Error:'+error.message;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

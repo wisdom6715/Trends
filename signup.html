@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Authentication.css">
+</head>
+<body>
+    <div class="signup">
+        <div class="header-contents">
+            <a href="Authentication.html">
+                <svg class="outline" id="Outline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><g id="_01_align_center" data-name="01 align center">
+                    <path d="M16.752,23.994,6.879,14.121a3,3,0,0,1,0-4.242L16.746.012,18.16,1.426,8.293,11.293a1,1,0,0,0,0,1.414l9.873,9.873Z"/></g>
+                </svg>
+            </a>
+            <p>Create account</p>
+        </div>
+        <form>
+            <div class="email-page">
+                <h1>Username?</h1>
+                <input type="text" id="username">
+            </div>
+            <div class="email-page">
+                <h1>Email?</h1>
+                <input type="text" class="email-input">
+            </div>
+            <div class="email-page">
+                <h1>Password?</h1>
+                <input type="password" id="password">
+            </div>
+            <div class="next-button">
+                <button onclick="registerUser()" type="button">Next</button>
+            </div>
+            <div class="message" id="message"></div>
+        </form>
+        <script>
+            async function registerUser(){
+                const username=document.getElementById('username').value;
+                const email=document.querySelector('.email-input').value; // Changed to querySelector
+                const password=document.getElementById('password').value;
+                const message=document.getElementById('message');
+                try {
+                    const response=await fetch('http://localhost:5000/api/register',{
+                        method:'POST',
+                        headers:{
+                            'Content-Type':'application/json'
+                        },
+                        body:JSON.stringify({username,email,password})
+                    });
+                    if (response.ok) {
+                        const data=await response.json();
+                        setTimeout(() => {
+                            alert("Login succesful")
+                            window.location.href="Trends.html";
+                        }, 2000);
+                    } else {
+                        const errorData=await response.json();
+                        message.style.color='red';
+                        message.textContent="User already exist:";
+                    }
+                } catch (error) {
+                    console.error("network error",error);
+                    message.style.color='red';
+                    message.textContent='Network Error:'+error.message;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

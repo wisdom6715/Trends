@@ -306,10 +306,20 @@ section{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        gap: 4.5rem;
+        align-items: center;
+    }
+    input{
+        padding-left: .5rem;
+    }
+    #header-contents{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
         gap: 5.5rem;
         align-items: center;
     }
-    .header-contents p{
+    .header-contents p, #header-contents p{
         font-size: 2rem;
     }
     .email-page{
@@ -317,10 +327,10 @@ section{
         flex-direction: column;
 
     }
-    .email-input:focus{
+    #password:focus{
         outline: none;
     }
-    .email-input{
+    #password{
         background-color: rgb(149, 149, 149);
         border: none;
         height: 2.5rem;
@@ -342,7 +352,7 @@ section{
         border-top-right-radius: 25px;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
-        color: black;
+        color: white;
         font-weight: bold;
         
     }
@@ -351,7 +361,6 @@ section{
         left: 1rem;
         right: 0;
         width: 90%;
-        display: none;
         
     }
     .login{
@@ -359,9 +368,12 @@ section{
         left: 1rem;
         right: 0;
         width: 90%;
-        display: none;
     }
     .email-page .email-input:focus{
         outline: none;
     }
+}
+.message{
+    text-align: center;
+    font-size: large;
 }
